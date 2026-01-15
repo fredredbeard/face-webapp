@@ -28,7 +28,7 @@ Mac OS Sequoia 15.6 (M1 Chip):
 
 Windows 11:
 
-  - Chrome v143 (Stable >30 FPS).
+  - Chrome v143.
 
 Samsung Galaxy S25 Ultra (Android 16):
 
