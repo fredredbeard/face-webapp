@@ -4,9 +4,16 @@ A real-time, privacy-focused face detection web application that runs entirely i
 
 To run the Web Application, open the link:
 
-# How to Run Locally
+# How to Run
 
+Simply click on the link below:
 https://fredredbeard.github.io/face-webapp/
+
+You can also run locally with a Python simple server:
+# Open terminal in the project folder
+python -m http.server 8000
+
+Then visit http://localhost:8000 in your browser.
 
 Tested Environments
 This application has been validated on the following configurations:
