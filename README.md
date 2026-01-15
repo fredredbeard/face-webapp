@@ -11,7 +11,9 @@ Simply click on the link below:
 https://fredredbeard.github.io/face-webapp/
 
 You can also run locally with a Python simple server:
+
 Open terminal in the project folder
+
 python -m http.server 8000
 
 Then visit http://localhost:8000 in your browser.
