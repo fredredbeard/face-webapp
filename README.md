@@ -18,7 +18,8 @@ python -m http.server 8000
 
 Then visit http://localhost:8000 in your browser.
 
-Tested Environments
+# Tested Environments
+
 This application has been validated on the following configurations:
 
 Mac OS Sequoia 15.6 (M1 Chip):
@@ -37,5 +38,6 @@ iPhone 13 (iOS 26.1):
 
   - Safari Mobile v26.1.
 
+# Privacy 
 
 No Data Collection: the app does not store, record, or transmit your video feed.
