@@ -32,7 +32,7 @@ Windows 11:
 
 Samsung Galaxy S25 Ultra (Android 16):
 
-  - Chrome Mobile v143 (Portrait mode, responsive).
+  - Chrome Mobile v143.
 
 iPhone 13 (iOS 26.1):
 
