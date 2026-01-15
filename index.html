@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Face Detect (Final)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Face Detection App</h1>
+    </header>
+
+    <div class="viewport-container">
+        <div class="stats-panel" id="statsPanel">
+            <div class="stat-row"><span>FPS:</span> <span id="fpsValue" class="stat-value">0</span></div>
+            <div class="stat-row"><span>Face count:</span> <span id="facesValue" class="stat-value">0</span></div>
+            <div class="stat-row"><span>Conf:</span> <span id="confValue" class="stat-value">0%</span></div>
+        </div>
+
+        <video id="video" autoplay muted playsinline></video>
+        <canvas id="output"></canvas>
+    </div>
+
+    <div class="controls">
+        <button id="toggleBtn" class="active">
+            <span id="btnIcon">◼</span> <span id="btnText">Stop Detection</span>
+        </button>
+
+        <button id="blurBtn" class="">
+            <span id="blurText">Privacy Blur: OFF</span>
+        </button>
+    </div>
+
+    <div class="privacy-note">
+        Notes on Privacy: this application runs entirely on client-side. No face images will be sent to any server.
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm/dist/tf-backend-wasm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
