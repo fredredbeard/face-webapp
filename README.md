@@ -24,7 +24,7 @@ This application has been validated on the following configurations:
 
 Mac OS Sequoia 15.6 (M1 Chip):
 
-  - Chrome v143, Firefox v146, Safari v18.6 (Smooth execution via WASM).
+  - Chrome v143, Firefox v146, Safari v18.6.
 
 Windows 11:
 
