@@ -49,7 +49,6 @@ canvas {
     object-fit: cover;
 }
 
-/* Stats Panel */
 .stats-panel {
     position: absolute;
     top: 10px;

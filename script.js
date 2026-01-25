@@ -1,4 +1,3 @@
-// Use WASM backend for smooth performance
 tf.wasm.setWasmPaths('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm/dist/');
 
 const video = document.getElementById('video');
@@ -7,12 +6,10 @@ const ctx = canvas.getContext('2d');
 const offscreen = document.createElement('canvas');
 const offCtx = offscreen.getContext('2d');
 
-// Stats Elements
 const fpsEl = document.getElementById('fpsValue');
 const facesEl = document.getElementById('facesValue');
 const confEl = document.getElementById('confValue');
 
-// Controls
 const toggleBtn = document.getElementById('toggleBtn');
 const btnText = document.getElementById('btnText');
 const btnIcon = document.getElementById('btnIcon');
@@ -25,7 +22,6 @@ let isDetectionActive = true;
 let isBlurActive = false; 
 let lastFrameTime = 0; 
 
-// 1. Toggle Detection
 toggleBtn.addEventListener('click', () => {
     isDetectionActive = !isDetectionActive;
     if (isDetectionActive) {
@@ -45,7 +41,6 @@ toggleBtn.addEventListener('click', () => {
     }
 });
 
-// 2. Toggle Blur
 blurBtn.addEventListener('click', () => {
     isBlurActive = !isBlurActive;
     if (isBlurActive) {
@@ -59,7 +54,6 @@ blurBtn.addEventListener('click', () => {
 
 async function main() {
     try {
-        // Initialize WASM Backend
         await tf.setBackend('wasm');
         await tf.ready();
         
@@ -96,7 +90,6 @@ async function detectFaces() {
     if (!isDetectionActive) { ctx.clearRect(0, 0, canvas.width, canvas.height); return; }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Update Stats
     fpsEl.innerText = fps;
     facesEl.innerText = predictions.length;
 
@@ -112,7 +105,6 @@ async function detectFaces() {
             const flippedX = ctx.canvas.width - end[0];
 
             if (isBlurActive) {
-                // ROBUST PIXELATION
                 const pixelFactor = 0.1; 
                 offscreen.width = width * pixelFactor;
                 offscreen.height = height * pixelFactor;
@@ -131,7 +123,6 @@ async function detectFaces() {
                 ctx.strokeRect(flippedX, start[1], width, height);
 
             } else {
-                // STANDARD BOX
                 ctx.beginPath();
                 ctx.lineWidth = 4;
                 ctx.strokeStyle = "#00ff9d";
