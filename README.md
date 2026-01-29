@@ -1,6 +1,6 @@
 # Client-Side Face Detection Application
 
-A real-time face detection web application that runs entirely in the browser. Powered by TensorFlow.js and optimized with WebAssembly (WASM) backend.
+A real-time face detection web application that runs entirely in the browser. Powered by TensorFlow.js and optimized with WebAssembly (WASM)
 
 # How to Run
 
