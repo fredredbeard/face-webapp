@@ -64,7 +64,9 @@ async function main() {
         await new Promise((resolve) => { video.onloadedmetadata = () => { resolve(video); }; });
         video.play();
 
-        model = await blazeface.load();
+        model = await blazeface.load({
+            modelUrl: 'assets/models/model.json'
+        });
         canvas.width = video.videoWidth;
         canvas.height = video.videoHeight;
 
