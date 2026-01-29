@@ -1,4 +1,4 @@
-tf.wasm.setWasmPaths('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm/dist/');
+tf.wasm.setWasmPaths('assets/wasm/');
 
 const video = document.getElementById('video');
 const canvas = document.getElementById('output');
